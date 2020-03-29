@@ -17,13 +17,12 @@ use TCG\Voyager\Facades\Voyager;
 use TCG\Voyager\Http\Controllers\VoyagerBreadController;
 use TCG\Voyager\Http\Controllers\Traits\BreadRelationshipParser;
 use TCG\Voyager\Http\Controllers\VoyagerBaseController;
-use TCG\Voyager\Http\Controllers\VoyagerBreadController;
 
 use App\Category;
 use App\CategoryProduct;
 use App\Product;
 
-class ProductsController extends VoyagerBreadController
+class ProductsController extends VoyagerBaseController
 {
     use BreadRelationshipParser;
 
@@ -790,8 +789,6 @@ class ProductsController extends VoyagerBreadController
                 'alert-type' => 'error',
             ]);
         }
-
-
 
         $model = app($dataType->model_name);
         if ($model && in_array(SoftDeletes::class, class_uses($model))) {
