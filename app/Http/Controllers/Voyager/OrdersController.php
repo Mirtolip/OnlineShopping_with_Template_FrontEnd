@@ -21,7 +21,6 @@ use TCG\Voyager\Http\Controllers\VoyagerBaseController;
 use App\Category;
 use App\CategoryProduct;
 use App\Product;
-
 use App\Order;
 
 
